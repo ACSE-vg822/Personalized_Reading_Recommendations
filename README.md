@@ -13,8 +13,8 @@ Then create the environment as instructed further below
     File_dump/: This directory contains all the pickle files.
     templates/: This directory contains the html files for the user interface.
     Utilities/: This directory contains two utility scripts as follows:
-        similarity_matrix.py: This script contains a function to compute the cosine similarity matrix for the books data.
-        recommendation.py: This script contains a function to generate book recommendations based on the similarity matrix.
+                similarity_matrix.py: This script contains a function to compute the cosine similarity matrix for the books data.
+                recommendation.py: This script contains a function to generate book recommendations based on the similarity matrix.
     Data_Cleaning.ipynb: This is the Jupyter Notebook where we clean the dataset.
     Model_and_Evaluation.ipynb: This is the Jupyter Notebook where we create and evaluate the model.
 
@@ -23,8 +23,7 @@ Ideally we'd want to save our cosine matrix after the first run and then resuse 
 
 # Setup
 1. Clone the repository in your local computer: https://github.com/ACSE-vg822/Personalized_Reading_Recommendations.git
-2. Create the environment: conda env create -f environment.yml
-   Then activate it: conda activate book_rec
+2. Create the environment: conda env create -f environment.yml. Then activate it: conda activate book_rec
 3. Go to 'Model_and_Evaluation.ipynb' and run all cells. This will ensure the a pickle file of cosine similarity matrix is saved in the File_dump/ directory.
 4. Now go to app.py and follow the intructions of commenting/uncommenting specific lines.
 
