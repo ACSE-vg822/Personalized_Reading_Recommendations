@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 import pickle
 
-from similarity_matrix import compute_similarity_matrix
-from recommendation import get_recommendations
+from Utilities.similarity_matrix import compute_similarity_matrix
+from Utilities.recommendation import get_recommendations
 
 df = pd.read_pickle('File_dump/df.pkl')
 # Once the user has run all cells in 'Model_and_Evaluation.ipynb', they should comment # 1 and uncomment # 2 and # 3
