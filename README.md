@@ -31,7 +31,7 @@ Ideally we'd want to save our cosine matrix after the first run and then resuse 
 
 5. In the command-line, go to the top most level of the directory and run this command: flask run 
 
-6. Paste this link in your browser: http://127.0.0.1:5000() 
+6. Paste this link in your browser: http://127.0.0.1:5000
 (Link to handle cases where some other program might be using this address: https://flask.palletsprojects.com/en/2.3.x/server/#address-already-in-use)
 
 Enjoy reading! :)
