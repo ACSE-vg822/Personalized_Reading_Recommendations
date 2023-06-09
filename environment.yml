@@ -1,0 +1,11 @@
+name: book_rec
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - flask
+  - scikit-learn
