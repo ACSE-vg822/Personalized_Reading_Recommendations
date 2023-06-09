@@ -9,7 +9,7 @@ from Utilities.recommendation import get_recommendations
 df = pd.read_pickle('File_dump/df.pkl')
 # Once the user has run all cells in 'Model_and_Evaluation.ipynb', they should comment # 1 and uncomment # 2 and # 3
 # This is to ensure that we don't create a new model each time, hence saving time and computaional capacity
-# After running that jupyter notebook the model is saved as a pickle and can be loaded here
+# After running that jupyter notebook, the model is saved as a pickle file and can be loaded here
 # cosine_sim.pkl is a big file and couldn't be pushed to GitHub, hence I am adding the instructions here
 
 cosine_sim = compute_similarity_matrix(df) # 1
