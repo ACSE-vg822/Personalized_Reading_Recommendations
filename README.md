@@ -6,7 +6,7 @@ The recommendation system takes as input a book title, and outputs a list of boo
 
 # System Requirements
 Python 3.7+
-Then create the environment as instructed further below
+And create the environment as instructed further below
 
 # Project Structure
     Dataset/: This directory contains the original dataset.
