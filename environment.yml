@@ -9,3 +9,7 @@ dependencies:
   - seaborn
   - flask
   - scikit-learn
+  - gunicorn            # For running Flask in production
+  - boto3               # AWS SDK for Python (needed if we use S3)
+  - rapidfuzz           # For fuzzy string matching
+  - pip                 # pip dependencies, if any
