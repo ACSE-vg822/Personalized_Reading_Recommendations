@@ -1,7 +1,7 @@
 import pandas as pd
 from rapidfuzz import process
 
-def get_recommendations(title, cosine_sim, df, threshold=50):
+def get_recommendations(title, cosine_sim, df, threshold=80):
     # Convert the input title to lowercase
     title = title.lower()
 

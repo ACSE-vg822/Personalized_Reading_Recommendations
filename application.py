@@ -19,7 +19,8 @@ with open('File_dump/cosine_sim.pkl', 'rb') as f: # 2
     cosine_sim = pickle.load(f)                   # 3
 
 
-app = Flask(__name__)
+application = Flask(__name__)
+app = application
 
 @app.route('/', methods=['GET', 'POST'])
 def process_input():

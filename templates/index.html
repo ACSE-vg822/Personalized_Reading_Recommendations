@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Book Recommendation System</title>
+    <title>Let's bring to you more interesting books to read :)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,6 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         /* Fullscreen background image with fade effect */
@@ -71,18 +72,49 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        /* Styling for the example line */
+        .example-text {
+            font-size: 16px;
+            color: #666;
+            margin-top: 20px;
+            font-style: italic;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Example book titles styled */
+        .example-book {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
     <div class="background-image"></div>
 
     <div class="form-container">
-        <h1>Book Recommendation System</h1>
+        <h1>Let's bring to you more interesting books to read :)</h1>
         <form method="post">
             <label for="input">What's your favorite title? :)</label>
             <input type="text" name="input" id="input">
             <input type="submit" value="Submit">
         </form>
+
+        <!-- Example search line -->
+        <div class="example-text">
+            Not sure where to start? Try searching for classics like <span class="example-book">Macbeth</span>, explore the magic of <span class="example-book">Orlando</span>, or dive into timeless tales like <span class="example-book">Pride and Prejudice</span> or <span class="example-book">A Room of One's Own</span>.
+        </div>        
     </div>
 </body>
 </html>
