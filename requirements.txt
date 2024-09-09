@@ -1,5 +1,5 @@
 Flask           # Flask framework for serving the app
-gunicorn        # WSGI server for running Flask in production
+#gunicorn        # WSGI server for running Flask in production
 pandas          # Data manipulation library
 numpy           # Numerical computations
 matplotlib      # Plotting library
