@@ -12,11 +12,11 @@ df = pd.read_pickle('File_dump/df.pkl')
 # After running that jupyter notebook, the model is saved as a pickle file and can be loaded here
 # cosine_sim.pkl is a big file and couldn't be pushed to GitHub, hence I am adding the instructions here
 
-cosine_sim = compute_similarity_matrix(df) # 1
+# cosine_sim = compute_similarity_matrix(df) # 1
 
 
-#with open('File_dump/cosine_sim.pkl', 'rb') as f: # 2
-    #cosine_sim = pickle.load(f)                   # 3
+with open('File_dump/cosine_sim.pkl', 'rb') as f: # 2
+    cosine_sim = pickle.load(f)                   # 3
 
 
 app = Flask(__name__)
@@ -30,7 +30,8 @@ def process_input():
         if result is False:
             return render_template('not_found.html')  # Render not_found.html template if result is False
         
-        result_table = result.iloc[:, 0:-1].to_html(index=False)  # Exclude first and last columns(i.e, index and content columns)
+        # Select only the second column from the DataFrame and render as HTML
+        result_table = result.iloc[:, [1]].to_html(index=False)  # Only the second column
         return render_template('result.html', table=result_table)
     return render_template('index.html')
 
