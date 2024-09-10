@@ -6,7 +6,8 @@ import pickle
 from Utilities.similarity_matrix import compute_similarity_matrix
 from Utilities.recommendation import get_recommendations
 
-df = pd.read_pickle('File_dump/df.pkl')
+with open('File_dump/df.pkl', 'rb') as f:
+    df = pickle.load(f)
 # Once the user has run all cells in 'Model_and_Evaluation.ipynb', they should comment # 1 and uncomment # 2 and # 3
 # This is to ensure that we don't create a new model each time, hence saving time and computaional capacity
 # After running that jupyter notebook, the model is saved as a pickle file and can be loaded here
