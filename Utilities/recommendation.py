@@ -1,7 +1,15 @@
 import pandas as pd
 from rapidfuzz import process
+import pickle
 
-def get_recommendations(title, cosine_sim, df, threshold=80):
+def get_recommendations(title, threshold=80):
+
+    with open('./File_dump/cosine_sim.pkl', 'rb') as f: 
+        cosine_sim = pickle.load(f)                   
+
+    with open('./File_dump/df.pkl', 'rb') as f:
+        df = pickle.load(f)
+
     # Convert the input title to lowercase
     title = title.lower()
 

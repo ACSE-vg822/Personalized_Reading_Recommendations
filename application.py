@@ -1,9 +1,8 @@
 from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
-import pickle
 
-from Utilities.similarity_matrix import compute_similarity_matrix
+#from Utilities.similarity_matrix import compute_similarity_matrix
 from Utilities.recommendation import get_recommendations
 
 
@@ -14,21 +13,15 @@ from Utilities.recommendation import get_recommendations
 
 # cosine_sim = compute_similarity_matrix(df) # 1
 
-
-with open('File_dump/cosine_sim.pkl', 'rb') as f: # 2
-    cosine_sim = pickle.load(f)                   # 3
-
-with open('File_dump/df.pkl', 'rb') as f:
-    df = pickle.load(f)
-    
 application = Flask(__name__)
 app = application
+
 
 @app.route('/', methods=['GET', 'POST'])
 def process_input():
     if request.method == 'POST':
         user_input = request.form['input']
-        result = get_recommendations(user_input, cosine_sim, df)
+        result = get_recommendations(user_input)
         
         if result is False:
             return render_template('not_found.html')  # Render not_found.html template if result is False
