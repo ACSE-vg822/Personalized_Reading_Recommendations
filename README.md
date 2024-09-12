@@ -48,7 +48,7 @@ To run the project locally, follow these steps:
 
 5. **Navigate to your browser**:
 
-    The app will be running at `http://localhost:8501`.
+    The app will be running at `https://personalizedreadingrecommendations-5ceie6kslmwvvk97zqeuzk.streamlit.app/`.
 
 ## 📁 Folder Structure
 
