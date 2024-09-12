@@ -25,8 +25,8 @@ To run the project locally, follow these steps:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/your-repo.git
-    cd your-repo
+    git clone https://github.com/yourusername/Personalized_Reading_Recommendations.git:
+    cd Personalized_Reading_Recommendations
     ```
 
 2. **Create a virtual environment** (Optional but recommended):
