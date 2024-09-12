@@ -25,8 +25,8 @@ def get_recommendations(title, threshold=80):
 
     # with open(df_path, 'rb') as f:
     #     df = pickle.load(f)
-    cosine_sim = joblib.load(cosine_sim_path)
     df = joblib.load(df_path)
+    cosine_sim = joblib.load(cosine_sim_path)    
     
     # Convert the input title to lowercase
     title = title.lower()
