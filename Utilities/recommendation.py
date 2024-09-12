@@ -1,15 +1,30 @@
 import pandas as pd
 from rapidfuzz import process
 import pickle
+import os
 
 def get_recommendations(title, threshold=80):
 
-    with open('./File_dump/cosine_sim.pkl', 'rb') as f: 
-        cosine_sim = pickle.load(f)                   
+    # Get the current directory where this script is located (inside Utilities)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
 
-    with open('./File_dump/df.pkl', 'rb') as f:
+    # Move up one level to the parent directory (your_project_directory)
+    base_dir = os.path.dirname(current_dir)
+
+    # Build paths to File_dump directory, which is at the same level as Utilities
+    file_dump_dir = os.path.join(base_dir, 'File_dump')
+
+    # Full paths to the model files inside File_dump
+    cosine_sim_path = os.path.join(file_dump_dir, 'cosine_sim.pkl')
+    df_path = os.path.join(file_dump_dir, 'df.pkl')
+
+    # Retrieve the cleaned dataset and saved model
+    with open(cosine_sim_path, 'rb') as f:
+        cosine_sim = pickle.load(f)
+
+    with open(df_path, 'rb') as f:
         df = pickle.load(f)
-
+    
     # Convert the input title to lowercase
     title = title.lower()
 
