@@ -1,9 +1,9 @@
-Flask           # Flask framework for serving the app
+Flask           == 3.0.3# Flask framework for serving the app
 #gunicorn        # WSGI server for running Flask in production
-pandas          # Data manipulation library
-numpy           # Numerical computations
-matplotlib      # Plotting library
-seaborn         # Statistical data visualization
-scikit-learn    # Machine learning library
-boto3           # AWS SDK for Python
-rapidfuzz       # Fuzzy string matching
+pandas          == 2.2.2 # Data manipulation library
+numpy           == 2.1.1 # Numerical computations
+matplotlib      == 3.9.2 # Plotting library
+seaborn         == 0.13.2 # Statistical data visualization
+scikit-learn    == 1.5.1 # Machine learning library
+boto3           == 1.35.14 # AWS SDK for Python
+rapidfuzz       == 3.9.7 # Fuzzy string matching
