@@ -16,8 +16,8 @@ def get_recommendations(title, threshold=80):
     file_dump_dir = os.path.join(base_dir, 'File_dump')
 
     # Full paths to the model files inside File_dump
-    cosine_sim_path = os.path.join(file_dump_dir, 'cosine_sim.pkl')
-    df_path = os.path.join(file_dump_dir, 'df.pkl')
+    cosine_sim_path = os.path.join(file_dump_dir, 'cosine_sim.joblib')
+    df_path = os.path.join(file_dump_dir, 'df.joblib')
 
     # # Retrieve the cleaned dataset and saved model
     # with open(cosine_sim_path, 'rb') as f:
