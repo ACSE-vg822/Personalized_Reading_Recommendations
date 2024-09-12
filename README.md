@@ -69,7 +69,7 @@ To run the project locally, follow these steps:
     ├── static/
     │   ├── index_image.png           # Optional image for the background
     ├── README.md                     # Project README file
-
+```
 ## 🔍 How to Use
 
 1. **Enter a Book Title**: You can input any book title (e.g., *Macbeth*, *Pride and Prejudice*, *Orlando*).
