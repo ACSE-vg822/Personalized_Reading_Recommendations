@@ -2,6 +2,8 @@
 
 A simple book recommendation system built using Streamlit and a similarity matrix to suggest books based on a user's input. The system uses a dataset of books and provides recommendations based on the most similar titles.
 
+Hosted on Streamlit: https://personalizedreadingrecommendations-5ceie6kslmwvvk97zqeuzk.streamlit.app/
+
 ## 🚀 Features
 
 - **Book Recommendations**: Users can input the title of a book, and the system will recommend similar books.
@@ -48,9 +50,25 @@ To run the project locally, follow these steps:
 
 5. **Navigate to your browser**:
 
-    The app will be running at `https://personalizedreadingrecommendations-5ceie6kslmwvvk97zqeuzk.streamlit.app/`.
+    The app will be locally hosted and can be found by following the link displayed in the terminal
 
 ## 📁 Folder Structure
+
+```bash
+/Personalized_Reading_Recommendations/
+    ├── streamlit_app.py              # Main Streamlit app file
+    ├── Data_Cleaning.ipynb           # Notebook for data cleaning
+    ├── Model_and_evaluation.ipynb    # Notebook for training and evaluation
+    ├── Utilities/
+    │   ├── recommendation.py         # Contains the recommendation function
+    │   ├── similarity_matrix.py      # Computing similarity matrix 
+    ├── File_dump/
+    │   ├── cosine_sim.pkl            # Pre-computed similarity matrix
+    │   ├── df.pkl                    # Cleaned dataset of books
+    ├── requirements.txt              # Project dependencies
+    ├── static/
+    │   ├── index_image.png           # Optional image for the background
+    ├── README.md                     # Project README file
 
 ## 🔍 How to Use
 
