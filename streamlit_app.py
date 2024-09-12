@@ -3,13 +3,6 @@ import base64
 import pandas as pd
 from Utilities.recommendation import get_recommendations
 
-# Function to load the image and convert it to base64 encoding
-def get_base64_image(image_path):
-    with open(image_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode()
-    
-# Convert  image in the static folder to base64
-img_base64 = get_base64_image('static/index_image.png')
 
 # Custom CSS for background and styling
 st.markdown("""
@@ -19,7 +12,7 @@ st.markdown("""
         font-family: 'Arial', sans-serif;
     }
     .stApp {
-        background-image: url("data:image/jpg;base64,{img_base64}");
+        /* background-image: url("static/index_image.png"); */
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;

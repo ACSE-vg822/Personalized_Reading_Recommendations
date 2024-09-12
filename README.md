@@ -1,37 +1,70 @@
-# Personalized_Reading_Recommendations
-This is a book recommendation system implemented in Python, using content-based filtering.
+# 📚 Book Recommendation System
 
-# Overview
-The recommendation system takes as input a book title, and outputs a list of books that are similar to the input book. The similarity is determined based on the book's title and authors. As advised in the problem statement, data has been taken from this link: https://www.kaggle.com/jealousleopard/goodreadsbooks
+A simple book recommendation system built using Streamlit and a similarity matrix to suggest books based on a user's input. The system uses a dataset of books and provides recommendations based on the most similar titles.
 
-# System Requirements
-Python 3.7+
-And create the environment as instructed further below
+## 🚀 Features
 
-# Project Structure
-    Dataset/: This directory contains the original dataset.
-    File_dump/: This directory contains all the pickle files.
-    templates/: This directory contains the html files for the user interface.
-    Utilities/: This directory contains two utility scripts as follows:
-                similarity_matrix.py: This script contains a function to compute the cosine similarity matrix for the books data.
-                recommendation.py: This script contains a function to generate book recommendations based on the similarity matrix.
-    Data_Cleaning.ipynb: This is the Jupyter Notebook where we clean the dataset.
-    Model_and_Evaluation.ipynb: This is the Jupyter Notebook where we create and evaluate the model.
+- **Book Recommendations**: Users can input the title of a book, and the system will recommend similar books.
+- **Interactive Interface**: Built using Streamlit, the app provides a clean, user-friendly interface for input and displaying recommendations.
+- **Real-Time Results**: The app instantly displays recommendations based on the entered book title.
+- **Example Searches**: Suggestions provided for sample book titles to help users start.
 
-# !Attention!
-Ideally we'd want to save our cosine matrix after the first run and then resuse it for recommendations over and over again. However, the pickle file of cosine matrix was ~818MB in size and couldn't be pushed to GitHub. Hence, the code at the moment is desgined that it runs by creating the model all over again for every run. **However, clear instructions have been provided as to how the user can create and save the matrix locally and reuse it every time. User is advised to go through the instructions carefully.**
+## 🎨 Technologies Used
 
-# Setup
-1. Clone the repository in your local computer: https://github.com/ACSE-vg822/Personalized_Reading_Recommendations.git
-2. Create the environment: conda env create -f environment.yml. Then activate it: conda activate book_rec
-3. Go to 'Model_and_Evaluation.ipynb' and run all cells. This will ensure the a pickle file of cosine similarity matrix is saved in the File_dump/ directory.
-4. Now go to app.py and follow the intructions of commenting/uncommenting specific lines.
+- **Streamlit**: For the web interface.
+- **Pandas**: To manage and manipulate the book dataset.
+- **Similarity Matrix**: For calculating book similarities based on titles.
+- **Python**: The core programming language used for the app.
 
-**Note: User can skip 3 and 4 if they want, and directly go to 5. However, in that case a new model will be created for every run, which is time and computation expensive :(**
+## 🛠️ Installation
 
-5. In the command-line, go to the top most level of the repository run this command: flask run 
+To run the project locally, follow these steps:
 
-6. Paste this link in your browser: http://127.0.0.1:5000
-(Link to handle cases where some other program might be using this address: https://flask.palletsprojects.com/en/2.3.x/server/#address-already-in-use)
+1. **Clone the repository**:
 
-Enjoy reading! :)
+    ```bash
+    git clone https://github.com/yourusername/your-repo.git
+    cd your-repo
+    ```
+
+2. **Create a virtual environment** (Optional but recommended):
+
+    ```bash
+    python3 -m venv myenv
+    source myenv/bin/activate   # On Windows use: myenv\Scripts\activate
+    ```
+
+3. **Install the dependencies**:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Run the Streamlit app**:
+
+    ```bash
+    streamlit run streamlit_app.py
+    ```
+
+5. **Navigate to your browser**:
+
+    The app will be running at `http://localhost:8501`.
+
+## 📁 Folder Structure
+
+## 🔍 How to Use
+
+1. **Enter a Book Title**: You can input any book title (e.g., *Macbeth*, *Pride and Prejudice*, *Orlando*).
+2. **View Recommendations**: Based on your input, the app will provide a list of similar books.
+3. **Example Queries**: If you're not sure what to search for, try one of the example queries under the input field.
+
+## ⚡ Example Book Titles
+
+- *Macbeth*
+- *Orlando*
+- *Pride and Prejudice*
+- *A Room of One's Own*
+
+## 🤔 Issues or Improvements?
+
+Feel free to open an issue or create a pull request with improvements or bug fixes.
