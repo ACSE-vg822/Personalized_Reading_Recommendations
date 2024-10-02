@@ -25,7 +25,7 @@ To run the project locally, follow these steps:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/Personalized_Reading_Recommendations.git:
+    git clone https://github.com/ACSE-vg822/Personalized_Reading_Recommendations.git:
     cd Personalized_Reading_Recommendations
     ```
 
